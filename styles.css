@@ -59,13 +59,11 @@ section {
     max-width: 800px;
 }
 
-#twitch-embed {
+#twitch-stream {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    width: 600px; /* Match the width set in the script */
-    height: 400px; /* Match the height set in the script */
+    flex-direction: column;
 }
 
 #twitch-embed {
