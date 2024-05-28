@@ -16,7 +16,7 @@ header {
 
 header .banner {
     width: 50%;
-    height: 50%;
+    height: auto;
 }
 
 header h1 {
@@ -48,6 +48,10 @@ main {
 
 section {
     margin-bottom: 2em;
+}
+
+#about {
+    max-width: 800px;
 }
 
 #twitch-embed {
