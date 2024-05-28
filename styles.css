@@ -94,3 +94,25 @@ form {
 form label, form input, form button {
     margin-bottom: 1em;
 }
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+    header .banner {
+        width: 100%; /* Ensure the banner takes full width on mobile */
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    #twitch-embed {
+        width: 100%; /* Ensure the Twitch embed takes full width on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    main {
+        padding: 1em;
+    }
+}
