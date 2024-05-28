@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #0e3071;
     color: #fff;
     padding: 1em 0;
     text-align: center;
@@ -15,7 +15,7 @@ header {
 }
 
 header .banner {
-    width: 100%;
+    width: 50%;
     height: auto;
 }
 
@@ -48,6 +48,24 @@ main {
 
 section {
     margin-bottom: 2em;
+}
+
+#twitch-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 600px; /* Match the width set in the script */
+    height: 400px; /* Match the height set in the script */
+}
+
+#twitch-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 600px; /* Match the width set in the script */
+    height: 400px; /* Match the height set in the script */
 }
 
 footer {
