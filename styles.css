@@ -71,8 +71,8 @@ section {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 600px; /* Match the width set in the script */
-    height: 400px; /* Match the height set in the script */
+    width: 480px; /* Match the width set in the script */
+    height: 360px; /* Match the height set in the script */
 }
 
 footer {
