@@ -86,16 +86,6 @@ footer {
     width: 100%;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-form label, form input, form button {
-    margin-bottom: 1em;
-}
-
 /* Media Queries for Responsive Design */
 
 @media (max-width: 768px) {
