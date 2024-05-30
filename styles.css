@@ -40,6 +40,12 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease; /* transition for hover effect */
+}
+
+header nav ul li a:hover,
+footer a:hover {
+    color: #ffd700; /* Change to gold color on hover */
 }
 
 main {
@@ -53,6 +59,8 @@ section {
     margin-bottom: 2em;
     width: 100%;
     text-align: center;
+    max-width: 800px; /* Ensure sections have a max width */
+    padding: 0 1em; /* Add padding to ensure content doesn't touch the edges */
 }
 
 #about {
@@ -64,6 +72,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 2em; /* Add space below the Twitch stream */
 }
 
 #twitch-embed {
@@ -89,10 +98,26 @@ footer {
 footer a {
     color: #ccc; /* Light grey color for the link */
     text-decoration: none;
+    transition: color 0.3s ease; /* transition for smooth hover*/
 }
 
 footer a:hover {
+    color: #ffd700; 
     text-decoration: underline;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+button:hover {
+    background-color: #555; /* Darker grey on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
 }
 
 /* Media Queries for Responsive Design */
@@ -107,6 +132,10 @@ footer a:hover {
         margin: 0.5em 0;
     }
 
+     header nav ul li a {
+        font-size: 1.2em;
+    }
+
     #twitch-embed {
         width: 100%; /* Ensure the Twitch embed takes full width on mobile */
         height: auto; /* Maintain aspect ratio */
@@ -114,6 +143,20 @@ footer a:hover {
 
     main {
         padding: 1em;
+    }
+
+    button {
+        width: 100%;
+        padding: 1em;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
