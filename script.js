@@ -1,6 +1,5 @@
 // script.js
 
-// Existing Twitch embed code
 const twitchChannel = "smallmothstudio";
 
 new Twitch.Embed("twitch-embed", {
@@ -10,7 +9,6 @@ new Twitch.Embed("twitch-embed", {
     layout: "video-with-chat",
 });
 
-// New section visibility code
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
