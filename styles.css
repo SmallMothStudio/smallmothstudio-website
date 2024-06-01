@@ -6,7 +6,7 @@ body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh; /* Ensure the body takes the full viewport height */
 }
 
 header {
@@ -15,7 +15,6 @@ header {
     padding: 1em 0;
     text-align: center;
     position: relative;
-    animation: fadeIn 1s ease-in-out;
 }
 
 header .banner {
@@ -53,13 +52,12 @@ footer a:hover {
 }
 
 main {
-    flex: 1; 
+    flex: 1; /* Allow main to grow and fill available space */
     padding: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: fadeIn 1s ease-in-out;
-    min-height: calc(100vh - 300px); 
+    min-height: calc(100vh - 300px); /* Adjust this value based on your header and footer height */
 }
 
 section {
@@ -96,21 +94,20 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 0.5em 0;
+    padding: 0.5em 0; /* Reduce padding for a slimmer footer */
     position: fixed;
     bottom: 0;
     width: 100%;
-    animation: fadeIn 1s ease-in-out;
 }
 
 footer a {
-    color: #ccc;
+    color: #ccc; /* Light grey color for the link */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #ffd700;
+    color: #ffd700; /* Change to gold color on hover */
     text-decoration: underline;
 }
 
@@ -124,13 +121,15 @@ button {
 }
 
 button:hover {
-    background-color: #555;
-    transform: scale(1.05);
+    background-color: #555; /* Darker grey on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
 }
+
+/* Media Queries for Responsive Design */
 
 @media (max-width: 768px) {
     header .banner {
-        width: 100%;
+        width: 100%; /* Ensure the banner takes full width on mobile */
     }
 
     header nav ul li {
@@ -143,8 +142,8 @@ button:hover {
     }
 
     #twitch-embed {
-        width: 100%;
-        height: auto;
+        width: 100%; /* Ensure the Twitch embed takes full width on mobile */
+        height: auto; /* Maintain aspect ratio */
     }
 
     main {
@@ -154,14 +153,5 @@ button:hover {
     button {
         width: 100%;
         padding: 1em;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }
