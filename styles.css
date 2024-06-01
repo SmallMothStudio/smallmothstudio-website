@@ -2,11 +2,19 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1e2339;
+    background: linear-gradient(135deg, #1e2339, #16213e, #0f3460);
+    background-size: 400% 400%;
     color: #fff;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
+    animation: gradientBackground 15s ease infinite;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 header {
@@ -50,6 +58,7 @@ header nav ul li a {
 header nav ul li a:hover,
 footer a:hover {
     color: #ffd700;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
 }
 
 main {
@@ -68,6 +77,14 @@ section {
     text-align: center;
     max-width: 800px;
     padding: 0 1em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #about {
@@ -90,6 +107,12 @@ section {
     width: 100%;
     max-width: 600px;
     height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+#twitch-embed:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 footer {
@@ -120,12 +143,13 @@ button {
     border: none;
     cursor: pointer;
     padding: 0.5em 1em;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
     background-color: #555;
     transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
 @media (max-width: 768px) {
