@@ -8,7 +8,7 @@ body {
 
 .hero {
     height: 100vh;
-    background: url('banner.jpg') no-repeat center center fixed;
+    background: url('banner.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -16,6 +16,7 @@ body {
     color: #fff;
     text-align: center;
     position: relative;
+    overflow: hidden; /* Ensure the content doesn't overflow */
 }
 
 .hero::before {
@@ -31,7 +32,8 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    padding: 0 1em; /* Add padding for mobile view */
+    padding: 0 1em;
+    max-width: 90%; /* Ensure content is not too wide on mobile */
 }
 
 .hero-content h1 {
@@ -60,17 +62,24 @@ body {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .hero {
-        height: 100vh;
-        background: url('banner.jpg') no-repeat center center fixed;
+        background: url('banner.jpg') no-repeat center center;
         background-size: cover;
+        height: 100vh;
+    }
+
+    .hero-content {
+        padding: 0 1em;
+        max-width: 90%;
     }
 
     .hero-content h1 {
-        font-size: 2em; /* Adjust font size for mobile */
+        font-size: 1.8em; /* Adjust font size for mobile */
+        margin-bottom: 0.5em;
     }
 
     .hero-content p {
         font-size: 1.2em; /* Adjust font size for mobile */
+        margin-bottom: 0.5em;
     }
 
     .hero-content .btn {
