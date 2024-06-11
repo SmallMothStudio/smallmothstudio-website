@@ -4,6 +4,9 @@ body {
     padding: 0;
     background-color: #1e2339;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .hero {
@@ -16,7 +19,7 @@ body {
     color: #fff;
     text-align: center;
     position: relative;
-    overflow: hidden; /* Ensure the content doesn't overflow */
+    overflow: hidden;
 }
 
 .hero::before {
@@ -27,14 +30,15 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1; /* Ensure the overlay is above the background but below the content */
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     padding: 0 1em;
-    max-width: 90%; /* Ensure content is not too wide on mobile */
+    max-width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
 .hero-content h1 {
@@ -70,26 +74,27 @@ body {
 
     .hero-content {
         padding: 0 1em;
-        max-width: 100%; /* Ensure content is not too wide on mobile */
+        max-width: 100%;
     }
 
     .hero-content h1 {
-        font-size: 2em; /* Adjust font size for mobile */
+        font-size: 2em;
         margin-bottom: 0.5em;
     }
 
     .hero-content p {
-        font-size: 1.2em; /* Adjust font size for mobile */
+        font-size: 1.2em;
         margin-bottom: 0.5em;
     }
 
     .hero-content .btn {
-        padding: 0.5em 1em; /* Adjust padding for mobile */
+        padding: 0.5em 1em;
     }
 }
 
 main {
     padding: 2em;
+    flex: 1; /* Allow main to grow and fill available space */
 }
 
 section {
@@ -102,7 +107,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 0.5em 0;
-    position: fixed;
+    position: relative; /* Change to relative for normal flow */
     bottom: 0;
     width: 100%;
 }
