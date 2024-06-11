@@ -1,3 +1,5 @@
+// script.js
+
 const twitchChannel = "smallmothstudio";
 
 new Twitch.Embed("twitch-embed", {
